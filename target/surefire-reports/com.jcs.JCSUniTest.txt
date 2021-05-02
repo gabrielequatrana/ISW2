@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.jcs.JCSUniTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.064 s <<< FAILURE! - in com.jcs.JCSUniTest
-t(com.jcs.JCSUniTest)  Time elapsed: 0.064 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load properties for name [/cache.ccf]
-	at com.jcs.JCSUniTest.t(JCSUniTest.java:35)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.jcs.JCSUniTest
