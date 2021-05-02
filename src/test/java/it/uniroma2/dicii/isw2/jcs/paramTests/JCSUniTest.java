@@ -1,6 +1,6 @@
-package com.jcs;
+package it.uniroma2.dicii.isw2.jcs.paramTests;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
