@@ -34,7 +34,8 @@ public class RemovalUtilTest {
 			{0,0,false},
 			{1,2,false},	// VEDERE TRUE-FALSE che fanno
 			{-1000,-2000,false},
-			{500,1000,false}
+			{500,1000,false},
+			{1,-1,false},
 		});
 	}
 	
