@@ -30,10 +30,11 @@ public class RemovalUtilTest {
 	@Parameters
 	public static Collection<Object[]> getTestParameters() {
 		return Arrays.asList(new Object[][] {
-			{1,2,false},
-			{2,10,false},
-			{20,50,false},	// VEDERE TRUE-FALSE che fanno
-			{10,15,false},
+			{-1,-2,false},
+			{0,0,false},
+			{1,2,false},	// VEDERE TRUE-FALSE che fanno
+			{-1000,-2000,false},
+			{500,1000,false}
 		});
 	}
 	
@@ -105,9 +106,7 @@ public class RemovalUtilTest {
 
 		for (int i = end; i >= start; i--) {
 			String res = (String) jcs.get(i + ":key");
-			if (res == null) {
-				assertNotNull("[" + i + ":key] should not be null", res);
-			}
+			assertNotNull("[" + i + ":key] should not be null", res);
 		}
 	}
 

@@ -27,9 +27,11 @@ public class ZeroSizeCacheUnitTest {
 	@Parameters
 	public static Collection<Integer[]> getTestParameters() {
 		return Arrays.asList(new Integer[][] {
-			{2000},
-			{1000},
 			{1},
+			{0},
+			{-1},
+			{10000},
+			{-10000}
 		});
 	}
 	
