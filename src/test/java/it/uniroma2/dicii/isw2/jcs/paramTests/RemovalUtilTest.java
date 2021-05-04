@@ -45,7 +45,7 @@ public class RemovalUtilTest {
 	
 	@BeforeClass
 	public static void configure() {
-		System.out.println("PATH: " + Paths.get(".").toAbsolutePath().normalize().toString());
+		System.out.println("PATH: " + Paths.get("./config/test-conf/cache.ccf").toAbsolutePath().normalize().toString());
 		JCS.setConfigFilename("/test-conf/cache.ccf");
 	}
 	
