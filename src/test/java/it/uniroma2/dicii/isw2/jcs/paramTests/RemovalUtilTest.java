@@ -1,15 +1,13 @@
 package it.uniroma2.dicii.isw2.jcs.paramTests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Properties;
 
 import org.apache.jcs.JCS;
-import org.apache.jcs.engine.control.CompositeCacheManager;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -25,8 +23,7 @@ public class RemovalUtilTest {
 	private boolean check;
 	
 	private JCS jcs;
-	private static CompositeCacheManager ccm;
-	
+
 	@Parameters
 	public static Collection<Object[]> getTestParameters() {
 		return Arrays.asList(new Object[][] {
@@ -47,20 +44,7 @@ public class RemovalUtilTest {
 	
 	@BeforeClass
 	public static void configure() {
-		RemovalUtilTest.ccm = CompositeCacheManager.getUnconfiguredInstance();
-		Properties props = new Properties();
-		
-		props.put("jcs.region.testCache1", "");
-		props.put("jcs.region.testCache1.cacheattributes", "org.apache.jcs.engine.CompositeCacheAttributes");
-		props.put("jcs.region.testCache1.cacheattributes.MaxObjects", "1000");
-		props.put("jcs.region.testCache1.cacheattributes.MemoryCacheName", "org.apache.jcs.engine.memory.lru.LRUMemoryCache");
-		
-		ccm.configure(props);
-	}
-	
-	@AfterClass
-	public static void release() {
-		RemovalUtilTest.ccm.release();
+		JCS.setConfigFilename("/test-conf/cache.ccf");
 	}
 	
 	@Before

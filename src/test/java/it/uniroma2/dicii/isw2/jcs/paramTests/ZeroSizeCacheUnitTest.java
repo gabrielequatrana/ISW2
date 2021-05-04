@@ -4,10 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Properties;
-
 import org.apache.jcs.JCS;
-import org.apache.jcs.engine.control.CompositeCacheManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +19,6 @@ public class ZeroSizeCacheUnitTest {
 	private int items;
 	
 	private JCS jcs;
-	private static CompositeCacheManager ccm;
 	
 	@Parameters
 	public static Collection<Integer[]> getTestParameters() {
@@ -41,28 +37,7 @@ public class ZeroSizeCacheUnitTest {
 
 	@Before
 	public void setUp() throws Exception {
-		ZeroSizeCacheUnitTest.ccm = CompositeCacheManager.getUnconfiguredInstance();
-		Properties props = new Properties();
-		
-		// VEDERE COME USERE ccf file pd
-		props.put("jcs.default", "");
-		props.put("jcs.default.cacheattributes", "org.apache.jcs.engine.CompositeCacheAttributes");
-		props.put("jcs.default.cacheattributes.MaxObjects", "0");
-		props.put("jcs.default.cacheattributes.MemoryCacheName", "org.apache.jcs.engine.memory.lru.LRUMemoryCache");
-		props.put("jcs.default.cacheattributes.UseMemoryShrinker", "true");
-		props.put("jcs.default.cacheattributes.MaxMemoryIdleTimeSeconds", "3600");
-		props.put("jcs.default.cacheattributes.ShrinkerIntervalSeconds", "1");
-		props.put("jcs.default.elementattributes", "org.apache.jcs.engine.ElementAttributes");
-		props.put("jcs.default.elementattributes.IsEternal", "false");
-		props.put("jcs.default.elementattributes.MaxLifeSeconds", "600");
-		props.put("jcs.default.elementattributes.IdleTime", "1800");
-		props.put("jcs.default.elementattributes.IsSpool", "true");
-		props.put("jcs.default.elementattributes.IsRemote", "true");
-		props.put("jcs.default.elementattributes.IsLateral", "true");
-		
-		ccm.configure(props);
-		
-		//JCS.setConfigFilename("/TestZeroSizeCache.ccf");
+		JCS.setConfigFilename("/test-conf/TestZeroSizeCache.ccf");
 		JCS.getInstance("testCache1");
 	}
 	
