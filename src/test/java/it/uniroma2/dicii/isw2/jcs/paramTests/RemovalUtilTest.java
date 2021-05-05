@@ -45,7 +45,7 @@ public class RemovalUtilTest {
 	
 	@BeforeClass
 	public static void configure() {
-		JCS.setConfigFilename("/test-conf/cache.ccf");
+		JCS.setConfigFilename("/cache.ccf");
 	}
 	
 	@Before
