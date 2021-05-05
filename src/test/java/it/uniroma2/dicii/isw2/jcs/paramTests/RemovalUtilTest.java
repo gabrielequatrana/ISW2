@@ -3,7 +3,6 @@ package it.uniroma2.dicii.isw2.jcs.paramTests;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collection;
 

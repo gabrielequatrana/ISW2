@@ -37,7 +37,7 @@ public class ZeroSizeCacheUnitTest {
 
 	@Before
 	public void setUp() throws Exception {
-		JCS.setConfigFilename("/test-conf/TestZeroSizeCache.ccf");
+		JCS.setConfigFilename("/TestZeroSizeCache.ccf");
 		JCS.getInstance("testCache1");
 	}
 	
