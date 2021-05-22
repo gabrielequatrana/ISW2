@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com</groupId>
-  <artifactId>isw2</artifactId>
+  <artifactId>jcs-isw2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>ISW2</name>
+  <name>JCS-ISW2</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
