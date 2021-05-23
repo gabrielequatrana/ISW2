@@ -3,6 +3,9 @@ language: java
 jdk:
     - openjdk14
     
+dist:
+    - xenial
+    
 os:
     - linux
   
