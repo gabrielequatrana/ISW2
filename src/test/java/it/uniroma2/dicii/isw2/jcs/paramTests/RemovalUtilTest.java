@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-@RunWith(value=Parameterized.class)
+@RunWith(Parameterized.class)
 public class RemovalUtilTest {
 	
 	private int start;
@@ -24,6 +24,9 @@ public class RemovalUtilTest {
 	
 	private JCS jcs;
 
+	/*
+	 * Test parameters obtained from Domain Partitioning
+	 */
 	@Parameters
 	public static Collection<Object[]> getTestParameters() {
 		return Arrays.asList(new Object[][] {
@@ -42,6 +45,9 @@ public class RemovalUtilTest {
 		this.check = check;
 	}
 	
+	/*
+	 * Environment configuration
+	 */
 	@BeforeClass
 	public static void configure() {
 		JCS.setConfigFilename("/cache.ccf");
@@ -52,11 +58,23 @@ public class RemovalUtilTest {
 		this.jcs = JCS.getInstance("testCache1");
 	}
 	
+	/*
+	 * Clean the environment
+	 */
 	@After
 	public void releaseResources() throws Exception {
 		this.jcs.clear();
 	}
 
+	/**
+     * Adds elements in the range specified and then removes them using the
+     * categorical or substring removal method.
+     *
+     * @param start
+     * @param end
+     *
+     * @exception Exception
+     */
 	@Test
 	public void runTestPutThenRemoveCategorical() throws Exception {
 		
@@ -82,6 +100,16 @@ public class RemovalUtilTest {
 		System.out.println(jcs.getStats());
 	}
 
+	/**
+     * Put items in the cache in this key range. Can be used to verify that
+     * concurrent operations are not effected by things like hierchical removal.
+     *
+     * @param start
+     *            int
+     * @param end
+     *            int
+     * @throws Exception
+     */
 	@Test
 	public void runPutInRange() throws Exception {
 
@@ -95,6 +123,17 @@ public class RemovalUtilTest {
 		}
 	}
 
+	/**
+     * Just get from start to end.
+     *
+     * @param start
+     *            int
+     * @param end
+     *            int
+     * @param check
+     *            boolean -- check to see if the items are in the cache.
+     * @throws Exception
+     */
 	@Test
 	public void runGetInRange() throws Exception {
 

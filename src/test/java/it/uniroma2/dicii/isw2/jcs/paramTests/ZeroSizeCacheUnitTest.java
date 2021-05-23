@@ -20,6 +20,9 @@ public class ZeroSizeCacheUnitTest {
 	
 	private JCS jcs;
 	
+	/*
+	 * Test parameters obtained from Domain Partitioning
+	 */
 	@Parameters
 	public static Collection<Integer[]> getTestParameters() {
 		return Arrays.asList(new Integer[][] {
@@ -35,17 +38,29 @@ public class ZeroSizeCacheUnitTest {
 		this.items = items;
 	}
 
+	/*
+	 * Environment configuration
+	 */
 	@Before
 	public void setUp() throws Exception {
 		JCS.setConfigFilename("/TestZeroSizeCache.ccf");
 		JCS.getInstance("testCache1");
 	}
 	
+	/*
+	 * Clean the environment
+	 */
 	@After
 	public void cleanUp() throws Exception {
 		this.jcs.clear();
 	}
 
+	/**
+     * Verify that a 0 size cache does not result in errors. You should be able
+     * to disable a region this way.
+     * @throws Exception
+     *
+     */
 	@Test
 	public void testPutGetRemove() throws Exception {
 		this.jcs = JCS.getInstance("testCache1");
