@@ -78,6 +78,7 @@
 			</plugins>
 		</pluginManagement>
 		
+		<!-- Test configs -->
 		<resources>
 			<resource>
 				<directory>src/test-conf</directory>
