@@ -3,6 +3,12 @@ language: java
 jdk:
     - openjdk14
     
+os:
+    - linux
+    
+dist:
+    - debian
+    
 addons:
     sonarcloud:
         organization: "gabrielequatrana"
