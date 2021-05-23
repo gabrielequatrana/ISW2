@@ -14,5 +14,8 @@ notifications:
         on_failure: never
 
 script:
+    - mvn compile
     - mvn test
+    - mvn package
+    - mvn clean
     
