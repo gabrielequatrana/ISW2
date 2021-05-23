@@ -53,7 +53,7 @@
 
 		<testSourceDirectory>src/test/</testSourceDirectory>
 
-		<sourceDirectory>/src/test/resources</sourceDirectory>
+		<sourceDirectory>/src/test-conf</sourceDirectory>
 
 		<pluginManagement>
 			<plugins>
