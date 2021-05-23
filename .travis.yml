@@ -9,10 +9,10 @@ os:
 dist:
     - debian
     
-addons:
-    sonarcloud:
-        organization: "gabrielequatrana"
-        token: "19ffc48e2289ebec400b39caff8340d3cdb15749"
+#addons:
+#    sonarcloud:
+#        organization: "gabrielequatrana"
+#        token: "19ffc48e2289ebec400b39caff8340d3cdb15749"
         
 notifications:
     email:
