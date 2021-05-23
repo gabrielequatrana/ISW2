@@ -79,6 +79,16 @@
 
 			</plugins>
 		</pluginManagement>
+		
+		<resources>
+			<resource>
+				<directory>src/test-conf</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.ccf</include>
+				</includes>
+			</resource>
+		</resources>
 
 	</build>
 	
