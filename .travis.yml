@@ -9,6 +9,9 @@ dist:
 os:
     - linux
     
+git:
+  depth: false
+    
 addons:
   sonarcloud:
     organization: "gabrielequatrana"
