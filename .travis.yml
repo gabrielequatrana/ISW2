@@ -22,4 +22,6 @@ notifications:
 script:
     #- mvn clean verify
     #- sonar-scanner
-    - mvn clean verify sonar:sonar
+    - mvn clean
+    - mvn test
+    - mvn sonar:sonar
