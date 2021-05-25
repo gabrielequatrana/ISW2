@@ -20,6 +20,6 @@ notifications:
         on_failure: never
 
 script:
-    - mvn clean verify
-    - sonar-scanner
-    
+    #- mvn clean verify
+    #- sonar-scanner
+    - mvn clean verify sonar:sonar
