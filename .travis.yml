@@ -8,6 +8,11 @@ dist:
     
 os:
     - linux
+    
+addons:
+  sonarcloud:
+    organization: "gabrielequatrana"
+    token: "77d4ac518583d71716915406b67f1bdbac9e5dbb" 
   
 notifications:
     email:
@@ -15,5 +20,6 @@ notifications:
         on_failure: never
 
 script:
-    - mvn test
+    - mvn clean verify
+    - sonar-scanner
     
