@@ -27,6 +27,4 @@ script:
     #- sonar-scanner
     #- mvn clean
     #- mvn test
-    #- mvn sonar:sonar -Pcoverage
-    #- mvn clean verify sonar:sonar
-    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=gabrielequatrana_JCSTest
+    - mvn clean verify sonar:sonar
