@@ -22,6 +22,9 @@ public class RemovalUtilTest {
 	private int end;
 	private boolean check;
 	
+	//
+	private int ciao;
+	
 	private JCS jcs;
 
 	/*
