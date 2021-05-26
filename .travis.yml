@@ -15,7 +15,7 @@ git:
 addons:
   sonarcloud:
     organization: "gabrielequatrana"
-    token: "77d4ac518583d71716915406b67f1bdbac9e5dbb" 
+    token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
   
 notifications:
     email:
@@ -28,4 +28,5 @@ script:
     #- mvn clean
     #- mvn test
     #- mvn sonar:sonar -Pcoverage
-    - mvn clean verify sonar:sonar
+    #- mvn clean verify sonar:sonar
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=gabrielequatrana_JCSTest
