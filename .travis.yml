@@ -27,4 +27,4 @@ script:
     #- sonar-scanner
     - mvn clean
     - mvn test
-    - mvn sonar:sonar
+    - mvn sonar:sonar -Pcoverage
