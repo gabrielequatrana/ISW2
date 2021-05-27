@@ -125,7 +125,7 @@
 			</build>
 		</profile>
 
-		<!--  <profile>
+		<profile>
 			<id>sonar</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -140,12 +140,14 @@
 				<sonar.links.scm>https://github.com/gabrielequatrana/JCSTest</sonar.links.scm>
 				<sonar.links.issue>https://github.com/gabrielequatrana/JCSTest/issues</sonar.links.issue>
 				<sonar.login>923e5e837e9fe5d4174e770f5dfca1e808404f7b</sonar.login>
+				<sonar.sources>src/main</sonar.sources>
+				<sonar.tests>src/test</sonar.tests>
 				<sonar.language>java</sonar.language>
 				<sonar.java.src>14</sonar.java.src>
 				<sonar.verbose>true</sonar.verbose>
 				<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 			</properties>
-		</profile> -->
+		</profile>
 
 	</profiles>
 
