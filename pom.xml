@@ -143,10 +143,15 @@
 				<sonar.organization>gabrielequatrana</sonar.organization>
 				<sonar.projectKey>gabrielequatrana_JCSTest</sonar.projectKey>
 				<sonar.projectName>JCSTest</sonar.projectName>
+				<sonar.links.homepage>https://github.com/gabrielequatrana/JCSTest</sonar.links.homepage>
+				<sonar.links.ci>https://travis-ci.com/github/gabrielequatrana/JCSTest</sonar.links.ci>
+				<sonar.links.scm>https://github.com/gabrielequatrana/JCSTest</sonar.links.scm>
+				<sonar.links.issue>https://github.com/gabrielequatrana/JCSTest/issues</sonar.links.issue>
 				<sonar.login>923e5e837e9fe5d4174e770f5dfca1e808404f7b</sonar.login>
-				<sonar.src>src</sonar.src>
+				<sonar.sources>src</sonar.sources>
 				<sonar.language>java</sonar.language>
 				<sonar.java.src>14</sonar.java.src>
+				<sonar.java.binaries>.</sonar.java.binaries>
 				<sonar.verbose>true</sonar.verbose>
 				<!-- import JaCoCo report to SonarCloud -->
 				<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
