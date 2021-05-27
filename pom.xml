@@ -141,7 +141,6 @@
 				<sonar.links.issue>https://github.com/gabrielequatrana/JCSTest/issues</sonar.links.issue>
 				<sonar.login>923e5e837e9fe5d4174e770f5dfca1e808404f7b</sonar.login>
 				<sonar.sources>src</sonar.sources>
-				<sonar.tests>src/test</sonar.tests>
 				<sonar.language>java</sonar.language>
 				<sonar.java.src>14</sonar.java.src>
 				<sonar.verbose>true</sonar.verbose>
