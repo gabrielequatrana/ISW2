@@ -9,8 +9,8 @@ os:
 dist:
     - xenial
     
-#git:
-#  depth: false
+git:
+  depth: false
     
 addons:
   sonarcloud:
@@ -18,8 +18,4 @@ addons:
     token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
 
 script:
-    #- mvn clean verify
-    #- sonar-scanner
-    #- mvn clean
-    #- mvn test
     - mvn clean verify sonar:sonar
