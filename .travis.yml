@@ -2,25 +2,20 @@ language: java
 
 jdk:
     - openjdk14
+     
+os:
+    - linux
     
 dist:
     - xenial
     
-os:
-    - linux
-    
-git:
-  depth: false
+#git:
+#  depth: false
     
 addons:
   sonarcloud:
     organization: "gabrielequatrana"
     token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
-  
-notifications:
-    email:
-        on_success: never
-        on_failure: never
 
 script:
     #- mvn clean verify
