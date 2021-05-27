@@ -60,8 +60,6 @@
 
 		<testSourceDirectory>src/test/</testSourceDirectory>
 
-		<sourceDirectory>src/test/resources</sourceDirectory>
-
 		<pluginManagement>
 			<plugins>
 
