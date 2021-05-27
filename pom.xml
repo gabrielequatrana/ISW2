@@ -142,7 +142,7 @@
 					<sonar.organization>gabrielequatrana</sonar.organization>
 					<sonar.projectKey>gabrielequatrana_JCSTest</sonar.projectKey>
 					<sonar.projectName>JCSTest</sonar.projectName>
-					<sonar.login>e92d1736b6886961bf4802e224ebdb762f6c2e50</sonar.login>
+					<sonar.login>923e5e837e9fe5d4174e770f5dfca1e808404f7b</sonar.login>
 					<sonar.src>src</sonar.src>
 					<sonar.language>java</sonar.language>
 					<sonar.java.src>14</sonar.java.src>
