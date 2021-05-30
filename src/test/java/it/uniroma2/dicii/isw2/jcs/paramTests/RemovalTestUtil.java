@@ -15,7 +15,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class MemoryTest {
+public class RemovalTestUtil {
 	
 	private int start;
 	private int end;
@@ -38,7 +38,7 @@ public class MemoryTest {
 		});
 	}
 	
-	public MemoryTest(int start, int end, boolean check) {
+	public RemovalTestUtil(int start, int end, boolean check) {
 		this.start = start;
 		this.end = end;
 		this.check = check;
@@ -49,8 +49,6 @@ public class MemoryTest {
 	 */
 	@Before
 	public void configureEnvironment() throws Exception {
-		JCS.setConfigFilename("/cache.ccf");
-		System.out.println("MHANZ");
 		this.jcs = JCS.getInstance("testCache1");
 	}
 	
