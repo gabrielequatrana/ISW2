@@ -9,14 +9,13 @@ import java.util.Collection;
 import org.apache.jcs.JCS;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class RemovalUtilTest {
+public class RemovalTestUtil {
 	
 	private int start;
 	private int end;
@@ -39,7 +38,7 @@ public class RemovalUtilTest {
 		});
 	}
 	
-	public RemovalUtilTest(int start, int end, boolean check) {
+	public RemovalTestUtil(int start, int end, boolean check) {
 		this.start = start;
 		this.end = end;
 		this.check = check;
@@ -48,11 +47,6 @@ public class RemovalUtilTest {
 	/*
 	 * Environment configuration
 	 */
-	@BeforeClass
-	public static void configure() {
-		JCS.setConfigFilename("/cache.ccf");
-	}
-	
 	@Before
 	public void configureEnvironment() throws Exception {
 		this.jcs = JCS.getInstance("testCache1");
