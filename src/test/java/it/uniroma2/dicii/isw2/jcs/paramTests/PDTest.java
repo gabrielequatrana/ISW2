@@ -15,7 +15,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class PD {
+public class PDTest {
 	
 	private int start;
 	private int end;
@@ -38,7 +38,7 @@ public class PD {
 		});
 	}
 	
-	public PD(int start, int end, boolean check) {
+	public PDTest(int start, int end, boolean check) {
 		this.start = start;
 		this.end = end;
 		this.check = check;
