@@ -58,7 +58,7 @@
 
 	<build>
 
-		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<testSourceDirectory>src/test</testSourceDirectory>
 
 		<pluginManagement>
 			<plugins>

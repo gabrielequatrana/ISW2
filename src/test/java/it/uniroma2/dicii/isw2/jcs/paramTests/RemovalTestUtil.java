@@ -91,7 +91,7 @@ public class RemovalTestUtil {
 		}
 
 		System.out.println("Confirmed that " + (end - start) + " items were removed");
-		System.out.println(jcs.getStats());
+		System.out.println(jcs.getStats()+"\n");
 	}
 
 	/**
