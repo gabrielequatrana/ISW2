@@ -15,7 +15,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class RemovalTestUtil {
+public class PD {
 	
 	private int start;
 	private int end;
@@ -38,7 +38,7 @@ public class RemovalTestUtil {
 		});
 	}
 	
-	public RemovalTestUtil(int start, int end, boolean check) {
+	public PD(int start, int end, boolean check) {
 		this.start = start;
 		this.end = end;
 		this.check = check;
