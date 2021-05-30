@@ -49,7 +49,6 @@ public class RemovalTestUtil {
 	 */
 	@Before
 	public void configureEnvironment() throws Exception {
-		JCS.setConfigFilename("/cache.ccf");
 		this.jcs = JCS.getInstance("testCache1");
 	}
 	
