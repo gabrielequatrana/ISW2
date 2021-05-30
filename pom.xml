@@ -83,8 +83,8 @@
 					<configuration>
 						<includes>
 							<include>**/*.java</include>
-							<runOrder>alphabetical</runOrder>
 						</includes>
+						<runOrder>alphabetical</runOrder>
 					</configuration>
 				</plugin>
 

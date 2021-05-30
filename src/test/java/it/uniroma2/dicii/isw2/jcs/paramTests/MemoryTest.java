@@ -50,6 +50,7 @@ public class MemoryTest {
 	@Before
 	public void configureEnvironment() throws Exception {
 		JCS.setConfigFilename("/cache.ccf");
+		System.out.println("MHANZ");
 		this.jcs = JCS.getInstance("testCache1");
 	}
 	
