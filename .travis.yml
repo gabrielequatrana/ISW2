@@ -21,4 +21,4 @@ script:
     - mvn clean verify -P coverageProfile
     - mkdir -p target/site/
     - java -jar lib/jacococli.jar report target/jacoco.exec --classfiles lib/jcs-1.3.jar --sourcefiles lib/jcs-1.3/ --html target/site/ --xml target/site/file.xml --csv target/site/file.csv
-    - sonar:sonar
+    - mvn verify sonar:sonar
