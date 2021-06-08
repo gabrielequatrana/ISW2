@@ -183,6 +183,26 @@
 
 		</profile>
 
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+				<sonar.organization>gabrielequatrana</sonar.organization>
+				<sonar.projectKey>gabrielequatrana_JCSTest</sonar.projectKey>
+				<sonar.projectName>JCSTest</sonar.projectName>
+				<sonar.login>d4fd9b2722fccf41152cb17fe25fd15e644b7c88</sonar.login>
+				<sonar.language>java</sonar.language>
+				<sonar.java.source>14</sonar.java.source>
+				<sonar.java.file.suffixes>.java</sonar.java.file.suffixes>
+				<sonar.tests>${project.build.testSourceDirectory}</sonar.tests>
+				<sonar.verbose>true</sonar.verbose>
+				<sonar.coverage.jacoco.xmlReportPaths>${basedir}/target/site/file.xml</sonar.coverage.jacoco.xmlReportPaths>
+			</properties>
+		</profile>
+
 	</profiles>
 
 </project>
