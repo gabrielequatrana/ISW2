@@ -44,7 +44,7 @@ public class ZeroSizeCacheUnitTest {
 	@Before
 	public void setUp() throws Exception {
 		JCS.setConfigFilename("/TestZeroSizeCache.ccf");
-		JCS.getInstance("testCache1");
+		this.jcs = JCS.getInstance("testCache1");
 	}
 	
 	/*
@@ -53,6 +53,7 @@ public class ZeroSizeCacheUnitTest {
 	@After
 	public void cleanUp() throws Exception {
 		this.jcs.clear();
+		jcs.dispose();
 	}
 
 	/**
@@ -63,7 +64,6 @@ public class ZeroSizeCacheUnitTest {
      */
 	@Test
 	public void testPutGetRemove() throws Exception {
-		this.jcs = JCS.getInstance("testCache1");
 
 		for (int i = 0; i <= items; i++) {
 			jcs.put(i + ":key", "data" + i);
