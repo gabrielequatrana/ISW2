@@ -29,7 +29,7 @@
 		<sonar.java.source>1.8</sonar.java.source>
 		<sonar.java.file.suffixes>.java</sonar.java.file.suffixes>
 		<sonar.verbose>true</sonar.verbose>
-		<sonar.coverage.jacoco.xmlReportPaths>/target/site/file.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>target/site/file.xml</sonar.coverage.jacoco.xmlReportPaths>
 		<redirectTestOutputToFile>true</redirectTestOutputToFile>
 	</properties>
 
