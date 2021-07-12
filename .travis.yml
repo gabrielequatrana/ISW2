@@ -18,8 +18,7 @@ addons:
     token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
 
 script:
-    - mvn clean verify -P coverageProfile
     - mkdir -p target/site/
     - java -jar lib/jacococli.jar report target/jacoco.exec --classfiles lib/jcs-1.3.jar --sourcefiles lib/jcs-1.3/ --html target/site/ --xml target/site/file.xml --csv target/site/file.csv
-    - mvn verify sonar:sonar
+    - mvn clean verify -P coverageProfile sonar:sonar
     - ls target/site/
