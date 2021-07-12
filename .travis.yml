@@ -22,4 +22,4 @@ script:
     - mkdir -p target/site/
     - java -jar lib/jacococli.jar report target/jacoco.exec --classfiles lib/jcs-1.3.jar --sourcefiles lib/jcs-1.3/ --html target/site/ --xml target/site/file.xml --csv target/site/file.csv
     - ls target/site/
-    - mvn validate sonar:sonar
+    - mvn org.jacoco:jacoco-maven-plugin:prepare-agent org.jacoco:jacoco-maven-plugin:report validate sonar:sonar
