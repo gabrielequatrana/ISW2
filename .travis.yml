@@ -19,3 +19,4 @@ addons:
 
 script:
     - mvn clean -P coverageProfile org.jacoco:jacoco-maven-plugin:prepare-agent org.jacoco:jacoco-maven-plugin:report verify sonar:sonar
+    - ls -l target/jacoco-gen/jcs-coverage/
