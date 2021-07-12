@@ -1,4 +1,4 @@
-package it.uniroma2.dicii.isw2.jcs.paramTests;
+package it.uniroma2.dicii.isw2.jcs.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -17,10 +17,12 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class RemovalTestUtil {
 	
+	// Test parameters
 	private int start;
 	private int end;
 	private boolean check;
 	
+	// JCS instance
 	private JCS jcs;
 
 	/*
@@ -59,6 +61,7 @@ public class RemovalTestUtil {
 	@After
 	public void releaseResources() throws Exception {
 		this.jcs.clear();
+		this.jcs.dispose();
 	}
 
 	/**

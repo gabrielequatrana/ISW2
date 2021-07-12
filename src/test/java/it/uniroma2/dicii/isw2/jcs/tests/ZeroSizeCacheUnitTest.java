@@ -1,4 +1,4 @@
-package it.uniroma2.dicii.isw2.jcs.paramTests;
+package it.uniroma2.dicii.isw2.jcs.tests;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +18,7 @@ public class ZeroSizeCacheUnitTest {
 	/** number to get each loop */
 	private int items;
 	
+	// JCS instance
 	private JCS jcs;
 	
 	/*
@@ -53,7 +54,7 @@ public class ZeroSizeCacheUnitTest {
 	@After
 	public void cleanUp() throws Exception {
 		this.jcs.clear();
-		jcs.dispose();
+		this.jcs.dispose();
 	}
 
 	/**
