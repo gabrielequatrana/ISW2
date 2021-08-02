@@ -8,6 +8,7 @@ import java.util.Collection;
 
 import org.apache.jcs.JCS;
 import org.junit.After;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,10 @@ public class RemovalTestUtil {
 	
 	// JCS instance
 	private JCS jcs;
+	
+	// Test environment
+	private enum TestType {TYPE1, TYPE2, TYPE3}
+	private TestType testType;
 
 	/*
 	 * Test parameters obtained from Domain Partitioning
@@ -31,19 +36,20 @@ public class RemovalTestUtil {
 	@Parameters
 	public static Collection<Object[]> getTestParameters() {
 		return Arrays.asList(new Object[][] {
-			{-1,-2,false},
-			{0,0,false},
-			{1,2,false},	// VEDERE TRUE-FALSE che fanno
-			{-1000,-2000,false},
-			{500,1000,false},
-			{1,-1,false},
+			{0, 200, false, TestType.TYPE1},
+			{601, 700, false, TestType.TYPE1},
+			{701, 800, false, TestType.TYPE1},
+			{300, 400, false, TestType.TYPE2},
+			{401, 600, false, TestType.TYPE2},
+			{0, 1000, false, TestType.TYPE3},
 		});
 	}
 	
-	public RemovalTestUtil(int start, int end, boolean check) {
+	public RemovalTestUtil(int start, int end, boolean check, TestType testType) {
 		this.start = start;
 		this.end = end;
 		this.check = check;
+		this.testType = testType;
 	}
 	
 	/*
@@ -75,6 +81,8 @@ public class RemovalTestUtil {
      */
 	@Test
 	public void runTestPutThenRemoveCategorical() throws Exception {
+		
+		Assume.assumeTrue(testType == TestType.TYPE1);
 		
 		for (int i = start; i <= end; i++) {
 			jcs.put(i + ":key", "data" + i);
@@ -110,6 +118,8 @@ public class RemovalTestUtil {
      */
 	@Test
 	public void runPutInRange() throws Exception {
+		
+		Assume.assumeTrue(testType == TestType.TYPE2);
 
 		for (int i = start; i <= end; i++) {
 			jcs.put(i + ":key", "data" + i);
@@ -134,6 +144,8 @@ public class RemovalTestUtil {
      */
 	@Test
 	public void runGetInRange() throws Exception {
+		
+		Assume.assumeTrue(testType == TestType.TYPE3);
 
 		// don't care if they are found
 		for (int i = end; i >= start; i--) {

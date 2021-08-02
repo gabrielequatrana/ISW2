@@ -170,7 +170,7 @@
 						<version>${surefire.version}</version>
 						<executions>
 							<execution>
-								<id>TheExecutionId-Surefire</id>
+								<id>Surefire</id>
 								<goals>
 									<goal>test</goal>
 								</goals>
@@ -195,7 +195,7 @@
 								</goals>
 								<configuration>
 									<executable>bash</executable>
-									<commandlineArgs>${basedir}/jacoco.sh</commandlineArgs>
+									<commandlineArgs>${basedir}\jacoco.sh</commandlineArgs>
 								</configuration>
 							</execution>
 						</executions>
