@@ -18,5 +18,4 @@ addons:
     token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
 
 script:
-    - mvn clean verify -X -P coverageProfile sonar:sonar
-    - ls -l target/jacoco-gen/jcs-coverage/
+    - mvn clean verify -P coverageProfile sonar:sonar
