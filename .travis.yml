@@ -7,15 +7,7 @@ os:
     - linux
     
 dist:
-    - xenial
-    
-git:
-  depth: false
-    
-addons:
-  sonarcloud:
-    organization: "gabrielequatrana"
-    token: "923e5e837e9fe5d4174e770f5dfca1e808404f7b" 
+    - xenial 
 
 script:
     - mvn clean verify
