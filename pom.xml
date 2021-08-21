@@ -194,8 +194,7 @@
 									<goal>exec</goal>
 								</goals>
 								<configuration>
-									<executable>bash</executable>
-									<commandlineArgs>${basedir}/jacoco.sh</commandlineArgs>
+									<executable>jacoco.bat</executable>
 								</configuration>
 							</execution>
 						</executions>
